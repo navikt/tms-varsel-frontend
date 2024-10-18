@@ -1,7 +1,6 @@
 import { defineConfig } from 'astro/config';
 import react from "@astrojs/react";
 import node from "@astrojs/node";
-const {TMS_APP_BASE_URL, TMS_MIN_SIDE_URL, TMS_VARSLER_API_URL} = loadEnv(import.meta.env, process.cwd(), "");
 
 
 // https://astro.build/config
