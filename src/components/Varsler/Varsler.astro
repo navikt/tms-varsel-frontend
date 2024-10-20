@@ -4,7 +4,9 @@ import VarselView from "@components/VarselView/VarselView";
 import {varslerApiurl} from "@utils/server/urls";
 import {getOboToken} from "../../utils/server/getOboToken";
 
-const oboToken = getOboToken(Astro.locals.token);
+const oboToken = await getOboToken(Astro.locals.token);
+console.log("Token", Astro.locals.token.substring(0,3));
+console.log("oboToken", oboToken.substring(0,3));
 
 const data = await fetch(varslerApiurl, {
     method: "GET",
